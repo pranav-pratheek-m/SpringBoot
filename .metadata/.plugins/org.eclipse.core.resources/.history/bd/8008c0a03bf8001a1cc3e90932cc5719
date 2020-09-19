@@ -1,0 +1,4 @@
+insert into alien values(80,'Pranav','Java');
+insert into alien values(81,'Pratheek','C++');
+insert into alien values(82,'Malleboyina','Python');
+insert into alien values(30,'Chintu','SQL');

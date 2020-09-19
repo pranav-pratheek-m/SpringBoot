@@ -1,0 +1,8 @@
+package com.pranav.demo.controller;
+
+public class AlienController {
+
+	public String home() {
+		return "home.jsp";
+	}
+}

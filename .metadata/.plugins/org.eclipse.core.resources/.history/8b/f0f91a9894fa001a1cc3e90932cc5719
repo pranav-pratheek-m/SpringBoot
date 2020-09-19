@@ -1,0 +1,14 @@
+package com.pranav.demo.model;
+
+public class Alien {
+
+	private int aid;
+	private String aname;
+	private String tech;
+	
+	
+	@Override
+	public String toString() {
+		return "Alien [aid=" + aid + ", aname=" + aname + ", tech=" + tech + "]";
+	}
+}

@@ -1,0 +1,10 @@
+package com.pranav.beginner;
+
+public class Alien {
+	
+	private int aid;
+	private String aname;
+	private String tech;
+	
+
+}

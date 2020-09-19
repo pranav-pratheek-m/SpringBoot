@@ -1,0 +1,20 @@
+package com.pranav.demo.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.pranav.demo.model.Alien;
+
+@Controller
+public class AlienController {
+
+	@RequestMapping("/")
+	public String home() {
+		return "home.jsp";
+	}
+	
+	
+	public String addAlien(Alien alien) {
+		return "home.jsp";
+	}
+}
