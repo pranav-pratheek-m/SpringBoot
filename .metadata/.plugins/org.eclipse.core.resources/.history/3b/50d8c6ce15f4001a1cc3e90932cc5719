@@ -1,9 +1,0 @@
-package com.pranav.beginner;
-
-public class Laptop {
-	
-	private int lid;
-	private String brand;
-	
-
-}
