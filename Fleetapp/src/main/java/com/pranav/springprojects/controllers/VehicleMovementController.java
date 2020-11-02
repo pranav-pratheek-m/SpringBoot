@@ -12,8 +12,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.pranav.springprojects.models.Location;
+import com.pranav.springprojects.models.Vehicle;
 import com.pranav.springprojects.models.VehicleMovement;
+import com.pranav.springprojects.services.LocationService;
 import com.pranav.springprojects.services.VehicleMovementService;
+import com.pranav.springprojects.services.VehicleService;
 
 @Controller
 public class VehicleMovementController {
@@ -21,10 +25,22 @@ public class VehicleMovementController {
 	@Autowired
 	private VehicleMovementService vehicleMovementService;
 	
+	@Autowired
+	private VehicleService vehicleService;
+	
+	@Autowired
+	private LocationService locationService;
+	
 	@GetMapping("/vehicleMovements")
 	public String getVehicleMovements(Model model) {	
 	    List<VehicleMovement> vehicleMovementList = vehicleMovementService.getVehicleMovements();
 	    model.addAttribute("vehicleMovementList",vehicleMovementList);
+	    
+	    List<Vehicle> vehicleList = vehicleService.getVehicles();
+	    model.addAttribute("VehicleList",vehicleList);
+	    
+		List<Location> locationList = locationService.getLocations();
+		model.addAttribute("locationList", locationList);
 	    
 		return "vehicleMovement";
 	}

@@ -693,6 +693,115 @@
  </form>
 </div>  
 
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <form>
+  <div class="modal-dialog modal-lg" role="document" style="width:70%">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Supplier Record</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		<table width="100%">
+			<tr>
+				<td width="50%">
+				
+				 <div class="form-group row">
+				    <label for="txtIdDetails" class="col-sm-4 col-form-label">Id: </label>
+				    <div class="col-sm-6">
+				      <input type="text" class="form-control" id="txtIdDetails" name="id" placeholder="Id" readonly>
+				    </div>
+				  </div>
+				  <div class="form-group row">
+				    <label for="txtNameDetails" class="col-sm-4 col-form-label">Name: </label>
+				    <div class="col-sm-6">
+				      <input type="text" class="form-control" id="txtNameDetails" name="name" placeholder="Name">
+				    </div>
+				  </div>
+				  <div class="form-group row">
+				    <label for="txtDetailsDetails" class="col-sm-4 col-form-label">Details.: </label>
+				    <div class="col-sm-6">
+				      <input type="text" class="form-control" id="txtDetailsDetails" name="details" placeholder="Details">
+				    </div>
+				  </div>
+				  <div class="form-group row">
+				    <label for="txtWebsiteDetails" class="col-sm-4 col-form-label">website: </label>
+				    <div class="col-sm-6">
+				      <input type="text" class="form-control" id="txtWebsiteDetails" name="website" placeholder="Website">
+				    </div>
+				  </div>
+				  <div class="form-group row">
+				    <label for="txtAddressDetails" class="col-sm-4 col-form-label">Address</label>
+				    <div class="col-sm-6">
+				      <textarea class="form-control" id="txtAddressDetails" name="address" placeholder="Address" rows="2"></textarea>
+				    </div>
+				  </div>
+				</td>
+				<td width="50%" style="padding-left:10px">
+				  <div class="form-group row">
+				    <label for="ddlStateDetails" class="col-sm-4 col-form-label">State/Province: </label>
+				    <div class="col-sm-6">
+					    <select class="form-control" id="ddlStateDetails" name="stateid">
+		        	       <option>-SELECT-</option>			    					  					    					    
+					       <option th:each="state : ${stateList}"
+						        th:value="${state.id}"
+						        th:text="${state.name}">
+						   </option>
+					    </select>				    
+				    </div>
+				  </div>
+				  <div class="form-group row">
+				    <label for="ddlCountryDetails" class="col-sm-4 col-form-label">Country: </label>
+				    <div class="col-sm-6">
+					    <select class="form-control" id="ddlCountryDetails" name="countryid">
+		        	       <option>-SELECT-</option>			    					  					    					    
+					       <option th:each="country : ${countryList}"
+						        th:value="${country.id}"
+						        th:text="${country.description}">
+						   </option>
+					    </select>				    
+				    </div>
+				  </div>
+				  <div class="form-group row">
+				    <label for="txtCityDetails" class="col-sm-4 col-form-label">City: </label>
+				    <div class="col-sm-6">
+				      <input type="text" class="form-control" id="txtCityDetails" name="city" placeholder="City">
+				    </div>
+				  </div>
+				  <div class="form-group row">
+				    <label for="txtPhoneDetails" class="col-sm-4 col-form-label">Phone: </label>
+				    <div class="col-sm-6">
+				      <input type="text" class="form-control" id="txtPhoneDetails" name="phone" placeholder="Phone">
+				    </div>
+				  </div>
+				  <div class="form-group row">
+				    <label for="txtMobileDetails" class="col-sm-4 col-form-label">Mobile: </label>
+				    <div class="col-sm-6">
+				      <input type="text" class="form-control" id="txtMobileDetails" name="mobile" placeholder="Mobile">
+				    </div>
+				  </div>
+
+				  <div class="form-group row">
+				    <label for="txtEmailDetails" class="col-sm-4 col-form-label">Email</label>
+				    <div class="col-sm-6">
+				      <input type="email" class="form-control" id="txtEmailDetails" name="email" placeholder="Email">
+				    </div>
+				  </div>
+				</td>
+			</tr>
+		</table>
+		  <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+ </form>
+</div>  
+
  <div class="modal" tabindex="-1" role="dialog" id="deleteModal">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

@@ -24,6 +24,8 @@ $('document').ready(function() {
 			$('#detailsDetails').val(vehicleModel.details);
 			$('#lastModifiedByDetails').val(vehicleModel.lastModifiedBy);
 			$('#lastModifiedDateDetails').val(vehicleModel.lastModifiedDate.substr(0,19).replace("T", " "));
+			$('#createdByDetails').val(vehicleModel.createdBy);
+			$('#createdDateDetails').val(vehicleModel.createdDate.substr(0,19).replace("T", " "));
 		});			
 		$('#detailsModal').modal();		
 	});	

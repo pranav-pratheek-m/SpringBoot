@@ -6,5 +6,6 @@ import com.pranav.springprojects.models.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
+	User findByUsername(String name);
 
 }

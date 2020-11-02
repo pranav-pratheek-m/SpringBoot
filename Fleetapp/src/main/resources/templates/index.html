@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 <meta charset="utf-8">
@@ -229,8 +229,8 @@
 					<!-- user login dropdown start-->
 					<li class="dropdown"><a data-toggle="dropdown"
 						class="dropdown-toggle" href="#"> <span class="profile-ava">
-								<img alt="" src="img/avatar1_small.jpg">
-						</span> <span class="username">Jenifer Smith</span> <b class="caret"></b>
+								<img alt="" th:src="@{'/img/photos/' + ${#authentication.getPrincipal().getUsername()} + '.jpg'}" height="40" width="40">
+						</span> <span class="username" th:text="${#authentication.getPrincipal().getUsername()}">Guest</span> <b class="caret"></b>
 					</a>
 						<ul class="dropdown-menu extended logout">
 							<div class="log-arrow-up"></div>

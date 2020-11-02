@@ -7,21 +7,19 @@ $('document').ready(function() {
 		event.preventDefault();		
 		var href= $(this).attr('href');		
 		$.get(href, function(vehicleHire, status){
+		
 			$('#idEdit').val(vehicleHire.id);
+			$('#ddlVehicleEdit').val(vehicleHire.vehicleid);		
 			$('#ddlClientEdit').val(vehicleHire.clientid);			
 			
-			var dateIn = vehicleHire.dateIn.substr(0,10);
-			var dateOut = vehicleHire.dateOut.substr(0,10);
-			$('#dateInEdit').val(dateIn);
-			$('#dateOutEdit').val(dateOut);
+			var startDate = vehicleHire.startDate.substr(0,10);
+			var endDate = vehicleHire.endDate.substr(0,10);
+			$('#startDateEdit').val(startDate);
+			$('#endDateEdit').val(endDate);
 			
-			$('#timeInEdit').val(vehicleHire.timeIn);
-			$('#timeOutEdit').val(vehicleHire.timeOut);
-			
-			$('#ddlLocationEdit').val(vehicleHire.locationid);
-			$('#priceEdit').val(vehicleHire.price);
 			$('#remarksEdit').val(vehicleHire.remarks);
-			$('#ddlVehicleEdit').val(vehicleHire.vehicleid);			
+			$('#ddlSupplierEdit').val(vehicleHire.supplierid);
+			$('#priceEdit').val(vehicleHire.price);			
 		});			
 		$('#editModal').modal();		
 	});
@@ -31,18 +29,17 @@ $('document').ready(function() {
 		var href= $(this).attr('href');		
 		$.get(href, function(vehicleHire, status){
 			$('#idDetails').val(vehicleHire.id);
-			$('#ddlClientDetails').val(vehicleHire.clientid);
+			$('#ddlVehicleDetails').val(vehicleHire.vehicleid);		
+			$('#ddlClientDetails').val(vehicleHire.clientid);			
 			
-			var dateIn = vehicleHire.dateIn.substr(0,10);
-			var dateOut = vehicleHire.dateOut.substr(0,10);
-			$('#dateInDetails').val(vehicleHire.dateIn);
-			$('#dateOutDetails').val(vehicleHire.dateOut);
-			$('#ddlLocationDetails').val(vehicleHire.locationid);
-			$('#priceDetails').val(vehicleHire.price);
+			var startDate = vehicleHire.startDate.substr(0,10);
+			var endDate = vehicleHire.endDate.substr(0,10);
+			$('#startDateDetails').val(startDate);
+			$('#endDateDetails').val(endDate);
+			
 			$('#remarksDetails').val(vehicleHire.remarks);
-			$('#ddlVehicleDetails').val(vehicleHire.vehicleid);
-			$('#lastModifiedByDetails').val(vehicleHire.lastModifiedBy);
-			$('#lastModifiedDateDetails').val(vehicleHire.lastModifiedDate.substr(0,19).replace("T", " "));
+			$('#ddlSupplierDetails').val(vehicleHire.supplierid);
+			$('#priceDetails').val(vehicleHire.price);
 		});			
 		$('#detailsModal').modal();		
 	});	
